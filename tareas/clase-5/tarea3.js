@@ -37,3 +37,12 @@ $calcularTiempoTotal.onclick = function() {
     const minutosClase5 = Number(document.querySelector("#minutos-clase-5").value);
 
     let minutosTotales = minutosClase1 + minutosClase2 + minutosClase3 + minutosClase4 + minutosClase5;
+    
+    const segundosClase1 = Number(document.querySelector("#segundos-clase-1").value);
+    const segundosClase2 = Number(document.querySelector("#segundos-clase-2").value);
+    const segundosClase3 = Number(document.querySelector("#segundos-clase-3").value);
+    const segundosClase4 = Number(document.querySelector("#segundos-clase-4").value);
+    const segundosClase5 = Number(document.querySelector("#segundos-clase-5").value);
+
+    let segundosTotales = segundosClase1 + segundosClase2 + segundosClase3 + segundosClase4 + segundosClase5;
+    
