@@ -17,3 +17,5 @@ function convertirMinutosAHoras(minutos) {
     }
     return horas;
 }
+$calcularTiempoTotal.onclick = function() {
+    
