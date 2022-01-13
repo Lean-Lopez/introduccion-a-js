@@ -1,9 +1,19 @@
 function convertirSegundosAMinutos(segundos){
-    let resultado = 0;
+    let minutos = 0;
     
     while(segundos > 60){
-        resultado ++;
+        minutos++;
         segundos = segundos - 60;
     }
-    return resultado;
+    return minutos;
+}
+
+function convertirMinutosAHoras(minutos) {
+    let horas = 0;
+
+    while(minutos > 60) {
+        horas++;
+        minutos = minutos - 60;
+    }
+    return horas;
 }
