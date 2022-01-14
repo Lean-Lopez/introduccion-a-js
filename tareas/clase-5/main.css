@@ -37,3 +37,16 @@ h1 {
     background-color: #EFE;
     font-size: 2em;
 }
+
+input { 
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width:100%;
+}
+
+label {
+    display:flex;
+    justify-content: center;
+    background-color: #2ff;
+}
