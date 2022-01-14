@@ -15,3 +15,9 @@ function convertirMinutosAHoras(minutos) {
     }
     return horas;
 }
+
+const $calcularTiempoTotal = document.querySelector("#calcular-tiempo-total");
+
+$calcularTiempoTotal.onclick = function() {
+
+}
