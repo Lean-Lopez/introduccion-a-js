@@ -43,4 +43,12 @@ $calcularTiempoTotal.onclick = function() {
     const segundosClase5 = Number(document.querySelector("#segundos-clase-5").value);
 
     let segundosTotales = segundosClase1 + segundosClase2 + segundosClase3 + segundosClase4 + segundosClase5;
+
+    const segundosConvertidosAMinutos = convertirSegundosAMinutos(segundosTotales);
+    segundosTotales = segundosTotales - segundosConvertidosAMinutos * 60;
+    minutosTotales += segundosConvertidosAMinutos;
+
+    const minutosConvertidosAHoras = convertirMinutosAHoras(minutosTotales);
+    minutosTotales = minutosTotales - minutosConvertidosAHoras * 60;
+    horasTotales += minutosConvertidosAHoras;
 }
