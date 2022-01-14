@@ -51,4 +51,7 @@ $calcularTiempoTotal.onclick = function() {
     const minutosConvertidosAHoras = convertirMinutosAHoras(minutosTotales);
     minutosTotales = minutosTotales - minutosConvertidosAHoras * 60;
     horasTotales += minutosConvertidosAHoras;
+
+    const textoResultado = document.querySelector("#resultado");
+    textoResultado.textContent = `Horas totales: ${horasTotales} | Minutos totales: ${minutosTotales} | Segundos totales: ${segundosTotales}`;
 }
