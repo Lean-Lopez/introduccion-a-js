@@ -31,23 +31,23 @@ $calcularTiempoTotal.onclick = function() {
     const minutosClases = document.querySelectorAll(".minutos-clase");
     let minutosTotales = 0;
     for(let i = 0; i < horasClases.length; i++){
+        if(minutosTotales >= 60){
+            horasTotales++;
+            minutosTotales -= 60;
+        }
         minutosTotales += Number(minutosClases[i].value)
     }
 
     const segundosClases = document.querySelectorAll(".segundos-clase");
     let segundosTotales = 0;
     for(let i = 0; i < segundosClases.length; i++){
+        if(segundosTotales >= 60){
+            minutosTotales++;
+            segundosTotales -= 60;
+        }
         segundosTotales += Number(segundosClases[i].value);
     }
     
-
-    const segundosConvertidosAMinutos = convertirSegundosAMinutos(segundosTotales);
-    segundosTotales = segundosTotales - segundosConvertidosAMinutos * 60;
-    minutosTotales += segundosConvertidosAMinutos;
-
-    const minutosConvertidosAHoras = convertirMinutosAHoras(minutosTotales);
-    minutosTotales = minutosTotales - minutosConvertidosAHoras * 60;
-    horasTotales += minutosConvertidosAHoras;
 
     const textoResultado = document.querySelector("#resultado");
     textoResultado.textContent = `Horas totales: ${horasTotales} || Minutos totales: ${minutosTotales} || Segundos totales: ${segundosTotales}`;
