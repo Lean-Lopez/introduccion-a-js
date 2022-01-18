@@ -1,6 +1,6 @@
 function convertirSegundosAMinutos(segundos){
     let minutos = 0;
-    while(segundos > 60) {
+    
     while(segundos >= 60) {
         minutos++;
         segundos = segundos - 60;
@@ -10,7 +10,7 @@ function convertirSegundosAMinutos(segundos){
 
 function convertirMinutosAHoras(minutos) {
     let horas = 0;
-    while(minutos > 60){
+    
     while(minutos >= 60){
         horas++;
         minutos = minutos - 60;
@@ -22,29 +22,24 @@ const $calcularTiempoTotal = document.querySelector("#calcular-tiempo-total");
 
 $calcularTiempoTotal.onclick = function() {
 
-    const horasClase1 = Number(document.querySelector("#horas-clase-1").value);
-    const horasClase2 = Number(document.querySelector("#horas-clase-2").value);
-    const horasClase3 = Number(document.querySelector("#horas-clase-3").value);
-    const horasClase4 = Number(document.querySelector("#horas-clase-4").value);
-    const horasClase5 = Number(document.querySelector("#horas-clase-5").value);
+    const horasClases = document.querySelectorAll(".horas-clase");
+    let horasTotales = 0;
+    for(let i = 0; i< horasClases.length; i++) {
+        horasTotales += Number(horasClases[i].value);
+    }
 
-    let horasTotales = horasClase1 + horasClase2 + horasClase3 + horasClase4 + horasClase5;
+    const minutosClases = document.querySelectorAll(".minutos-clase");
+    let minutosTotales = 0;
+    for(let i = 0; i < horasClases.length; i++){
+        minutosTotales += Number(minutosClases[i].value)
+    }
 
-    const minutosClase1 = Number(document.querySelector("#minutos-clase-1").value);
-    const minutosClase2 = Number(document.querySelector("#minutos-clase-2").value);
-    const minutosClase3 = Number(document.querySelector("#minutos-clase-3").value);
-    const minutosClase4 = Number(document.querySelector("#minutos-clase-4").value);
-    const minutosClase5 = Number(document.querySelector("#minutos-clase-5").value);
-
-    let minutosTotales = minutosClase1 + minutosClase2 + minutosClase3 + minutosClase4 + minutosClase5;
-
-    const segundosClase1 = Number(document.querySelector("#segundos-clase-1").value);
-    const segundosClase2 = Number(document.querySelector("#segundos-clase-2").value);
-    const segundosClase3 = Number(document.querySelector("#segundos-clase-3").value);
-    const segundosClase4 = Number(document.querySelector("#segundos-clase-4").value);
-    const segundosClase5 = Number(document.querySelector("#segundos-clase-5").value);
-
-    let segundosTotales = segundosClase1 + segundosClase2 + segundosClase3 + segundosClase4 + segundosClase5;
+    const segundosClases = document.querySelectorAll(".segundos-clase");
+    let segundosTotales = 0;
+    for(let i = 0; i < segundosClases.length; i++){
+        segundosTotales += Number(segundosClases[i].value);
+    }
+    
 
     const segundosConvertidosAMinutos = convertirSegundosAMinutos(segundosTotales);
     segundosTotales = segundosTotales - segundosConvertidosAMinutos * 60;
@@ -55,5 +50,5 @@ $calcularTiempoTotal.onclick = function() {
     horasTotales += minutosConvertidosAHoras;
 
     const textoResultado = document.querySelector("#resultado");
-    textoResultado.textContent = `Horas totales: ${horasTotales} | Minutos totales: ${minutosTotales} | Segundos totales: ${segundosTotales}`;
+    textoResultado.textContent = `Horas totales: ${horasTotales} || Minutos totales: ${minutosTotales} || Segundos totales: ${segundosTotales}`;
 }
