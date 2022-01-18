@@ -20,3 +20,12 @@ function encontrarNumeroMenor(array){
     return numeroMenor;
 }
 
+function calcularPromedio(array){
+    let sumatoria = 0;
+
+    for(let i = 0; i < array.length; i++){
+        sumatoria += array[i];
+    }
+    return sumatoria/array.length;
+}
+
