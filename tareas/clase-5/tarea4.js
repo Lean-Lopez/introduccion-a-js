@@ -50,3 +50,9 @@ function encontrarNumeroMasRepetido(array){
     }
 }
 
+const numeros = document.querySelectorAll("li");
+let arrayNumeros = [];
+for(let i = 0; i < numeros.length;i++){
+    arrayNumeros.push(Number(numeros[i].textContent));
+}
+
