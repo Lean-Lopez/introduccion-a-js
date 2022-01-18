@@ -37,3 +37,13 @@ h1 {
     background-color: #EFE;
     font-size: 2em;
 }
+
+li{
+    font-size: 2em;
+}
+
+em{
+    
+    font-size: 2em;
+    background-color: #2ef;
+}
