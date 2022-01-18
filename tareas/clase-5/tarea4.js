@@ -29,3 +29,24 @@ function calcularPromedio(array){
     return sumatoria/array.length;
 }
 
+function encontrarNumeroMasRepetido(array){
+    
+    let numeroRepetido;
+    let contadorRepeticiones;
+    let contadorMaximasRepeticiones = 0;
+
+    for(let i = 0; i < array.length; i++) {
+        contadorRepeticiones = 0;
+        for(let j = 0; j < array.length; j++){
+            if(array[i] === array[j]){
+                contadorRepeticiones++;
+            }
+            if(contadorRepeticiones > contadorMaximasRepeticiones){
+                contadorMaximasRepeticiones = contadorRepeticiones;
+                numeroRepetido = array[i];
+            }
+        }
+        return numeroRepetido;
+    }
+}
+
