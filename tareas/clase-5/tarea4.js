@@ -9,3 +9,14 @@ function encontrarNumeroMayor(array){
     return numeroMayor;
 }
 
+function encontrarNumeroMenor(array){
+    let numeroMenor = array[0];
+
+    for(let i = 1; i < array.length; i++) {
+        if(array[i] < numeroMenor){
+            numeroMenor = array[i];
+        }
+    }
+    return numeroMenor;
+}
+
