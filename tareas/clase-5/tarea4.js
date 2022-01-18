@@ -56,3 +56,12 @@ for(let i = 0; i < numeros.length;i++){
     arrayNumeros.push(Number(numeros[i].textContent));
 }
 
+const $realizarCalculos = document.querySelector("#calcular");
+$realizarCalculos.onclick = function(){
+    document.querySelector("#resultado-1").textContent = `El número mas grande es: ${encontrarNumeroMayor(arrayNumeros)}`;
+    document.querySelector("#resultado-2").textContent = `El número mas chico es: ${encontrarNumeroMenor(arrayNumeros)}`;
+    document.querySelector("#resultado-3").textContent = `El promedio de los numeros es: ${calcularPromedio(arrayNumeros)}`;
+    document.querySelector("#resultado-4").textContent = `El número mas repetido es: ${encontrarNumeroMasRepetido(arrayNumeros)}`;
+
+}
+
