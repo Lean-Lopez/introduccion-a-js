@@ -38,6 +38,20 @@ h1 {
     font-size: 2em;
 }
 
+
+input { 
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width:100%;
+}
+
+label {
+    display:flex;
+    justify-content: center;
+    background-color: #2ff;
+}
+=======
 li{
     font-size: 2em;
 }
@@ -47,3 +61,4 @@ em{
     font-size: 2em;
     background-color: #2ef;
 }
+
